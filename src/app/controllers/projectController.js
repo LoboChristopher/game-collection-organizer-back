@@ -10,7 +10,7 @@ router.use(authMiddleware);
 
 router.get("/", async (req, res) => {
   try {
-    const project = await Project.find().populate("user");
+    const project = await Project.find();
 
     return res.send({ project });
   } catch (err) {
@@ -54,4 +54,4 @@ router.delete("/:projectId", async (req, res) => {
   }
 });
 
-module.exports = (app) => app.use("/project", router);
+module.exports = (app) => app.use("/projects", router);
