@@ -1,0 +1,1 @@
+To run the server simply run from the src folder node index.js

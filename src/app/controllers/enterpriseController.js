@@ -31,7 +31,7 @@ router.get("/:enterpriseId", async (req, res) => {
   }
 });
 
-router.post("/", async (req, res) => {
+router.post("/register", async (req, res) => {
     try {
       const { title, description, consoles } = req.body;
   
